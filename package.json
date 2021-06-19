@@ -1,0 +1,19 @@
+{
+  "name": "maximetanguy_3_08042021",
+  "version": "1.0.0",
+  "description": "sass project",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./assets/styles/sass/main.scss:./assets/styles/style.css --style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mxtgy/Maximetanguy_3_08042021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mxtgy/Maximetanguy_3_08042021/issues"
+  },
+  "homepage": "https://github.com/Mxtgy/Maximetanguy_3_08042021#readme"
+}
