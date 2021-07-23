@@ -1,0 +1,32 @@
+main {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.location {
+    padding: 1em 0;
+    background-color: #EAEAEA;
+    color: #353535;
+    
+    .fas {
+        margin-right: .4em;
+    }
+}
+
+.presentation {
+    background-color: #F6F6F6;
+    color: #000;
+    padding: 2.1em 2.3em 3.2em;
+
+    .-title {
+        font-weight: 700;
+        font-size: 1.6em;
+        margin: 0;
+    }
+    .-text {
+        display: block;
+        font-size: 1.1em;
+        font-weight: 300;
+        margin: 1.3em 0 1.5em;
+    }
+}
