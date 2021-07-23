@@ -1,0 +1,27 @@
+header {
+    text-align: center;
+
+    .logo {
+        padding: .2em 0 .05em;
+        position: relative;
+        box-shadow: 0px 2px 10px #00000030;
+
+        a {
+            cursor: pointer;
+
+            img {
+                width: 60%;
+            }
+        }
+    }
+
+    @media screen and (min-width: 600px) {
+        .logo { 
+            padding: .5em 0 .2em;
+
+            img {
+                max-width: 350px;
+            }
+        }
+    }
+}
