@@ -31,3 +31,92 @@ main {
         margin: 1.3em 0 1.5em;
     }
 }
+
+.fonctionnement {
+    padding: 2em 1.5em 3.2em;
+
+    &__title {
+        text-align: left;
+        font-size: 1.5em;
+    }
+    &__list {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 1em 0 1em;
+        width: 90%;
+
+        &--step {
+            background-color: #EAEAEA;
+            color: #353535;
+            cursor: pointer;
+            position: relative;
+            padding: 1.5em .5em;
+            margin: .8em 0;
+            display: flex;
+            justify-content: flex-start;
+            font-weight: 500;
+            border-radius: 1em;
+            width: 100%;
+            box-shadow: 0px 2px 10px #00000030;
+
+            &:hover {
+                background-color: #F5EDFF;
+
+                .fas {
+                    color: #9356DC;
+                } 
+            }
+
+            &::before {
+
+            }
+
+            .fas {
+                color: #7E7E7E;
+                margin-right: 1.6em;
+                margin-left: 1.6em;
+                font-size: 1.3em;
+            }
+            @include responsive(small) {
+                font-size: .8em;
+            }
+        }
+        .step1::before, .step2::before, .step3::before {
+            background-color: #9356dc;
+            color: #fff;
+            font-size: .9em;
+            border-radius: 20em;
+            position: absolute;
+            top: 51%;
+            left: 0;
+            transform: translate(-50%, -50%);
+            padding: .3em 0.6em;
+        }
+        .step1::before {
+            content: '1';
+        }
+        .step2::before {
+            content: "2";
+        }
+        .step3::before {
+            content: "3";
+        }
+    }
+
+    @include responsive(medium) {
+        &__title {
+            text-align: center;
+        }
+
+        &__list {
+            align-items : center;
+            margin: auto;
+
+            &--step {
+                max-width: 50%;
+            }
+        }
+    }
+}
