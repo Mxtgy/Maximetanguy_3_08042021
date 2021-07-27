@@ -1,4 +1,4 @@
-.presentation .-button {
+.btn {
     color: #fff;
     border-radius: 50em;
     border: none;
@@ -6,5 +6,6 @@
     font-weight: 600;
     font-size: 1em;
     box-shadow: 0px 2px 10px #00000030;
-    background: linear-gradient(175deg, $secondary-color, $primary-color);
+
+    @include primary-btn($secondary-color, $primary-color);
 }

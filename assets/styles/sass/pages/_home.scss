@@ -7,6 +7,7 @@ main {
     padding: 1em 0;
     background-color: #EAEAEA;
     color: #353535;
+    font-style: normal;
     
     .fas {
         margin-right: .4em;
@@ -18,12 +19,12 @@ main {
     color: #000;
     padding: 2.1em 2.3em 3.2em;
 
-    .-title {
+    &__title {
         font-weight: 700;
         font-size: 1.6em;
         margin: 0;
     }
-    .-text {
+    &__subtitle {
         display: block;
         font-size: 1.1em;
         font-weight: 300;
