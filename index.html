@@ -33,28 +33,29 @@
             <li class="fonctionnement__list--step step3"><span><i class="fas fa-store"></i>Dégustez au  restaurant</span></li>
         </ul>
     </section>
-    <section class="restaurant">
-        <h2 class="restaurant__title">Restaurants</h2>
-        <div class="restaurant__list">
-            <a href="">
+    <section class="restaurants">
+        <h2 class="restaurants__title">Restaurants</h2>
+        <div class="restaurants__list">
+            <a class="restaurant__card" href="">
                 <article>
                     <header>
-                        <figure class="">
+                        <figure>
                             <picture>
-                                <source srcset="assets/images/hebergements/1_xlarge/marcus-loke-WQJvWU_HZFo-unsplash.jpg 5993w,
-                                assets/images/hebergements/2_large/marcus-loke-WQJvWU_HZFo-unsplash.jpg 2997w,
-                                assets/images/hebergements/3_medium/marcus-loke-WQJvWU_HZFo-unsplash.jpg 1499w,
-                                assets/images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg 750w" sizes="100vw">
-                                <img src="assets/images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" class="" alt="">
-                            </picture>
+                                <source srcset="
+                                assets/images/restaurants/small/jay-wennington-N_Y88TWmGwA-unsplash_h4jrm8_c_scale,w_600.jpg 600w,
+                                assets/images/restaurants/medium/jay-wennington-N_Y88TWmGwA-unsplash_h4jrm8_c_scale,w_1273.jpg 1273w,
+                                assets/images/restaurants/large/jay-wennington-N_Y88TWmGwA-unsplash_h4jrm8_c_scale,w_1759.jpg 1759w,
+                                assets/images/restaurants/x-large/jay-wennington-N_Y88TWmGwA-unsplash_h4jrm8_c_scale,w_2100.jpg 2100w" sizes="100vw">
+                                <img class="restaurant__img" src="assets/images/restaurants/x-large/jay-wennington-N_Y88TWmGwA-unsplash_h4jrm8_c_scale,w_2100.jpg" alt="">
+                              </picture>
                         </figure>
                     </header>
                     <footer>
-                        <div>
-                            <span>La palette du goût</span>
-                            <span>Ménilmontant</span>
+                        <div class="restaurant__text">
+                            <span class="restaurant__text--title">La palette du goût</span>
+                            <span class="restaurant__text--ville">Ménilmontant</span>
                         </div>
-                        <div></div>
+                        <div class="restaurant__heart"><i class="far fa-heart"></i><i class="fas fa-heart"></i></div>
                     </footer>
                 </article>
             </a>
