@@ -33,7 +33,7 @@ main {
 }
 
 .fonctionnement {
-    padding: 2em 1.5em 3.2em;
+    padding: 2em 1.5em 2em;
 
     &__title {
         text-align: left;
@@ -113,16 +113,24 @@ main {
         &__list {
             align-items : center;
             margin: auto;
+            flex-direction: row;
+            justify-content: space-between;
 
             &--step {
-                max-width: 50%;
+                max-width: 28%;
+            }
+
+            .fas {
+                margin-right: 1.3em;
+                margin-left: 1.3em;
+                font-size: 1em;
             }
         }
     }
 }
 
 .restaurants {
-    padding: 2em 1.5em 3.2em;
+    padding: 2em 1.5em 2em;
     background-color: #F6F6F6;
 
     &__title {
@@ -134,11 +142,21 @@ main {
         flex-direction: column;
         flex-wrap: wrap;
         width: 100%;
+
+        @include responsive(medium) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
     }
     .restaurant__card {
         text-decoration: none;
         cursor: pointer;
         margin-bottom: 2em;
+
+        @include responsive(medium) {
+            width: 31.5%;
+            max-width: 36em;
+        }
         
         .restaurant__inside {
             width: 100%;
