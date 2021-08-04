@@ -1,0 +1,137 @@
+.image {
+    figure {
+        margin: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        @include responsive(medium) {
+            height: 25em;
+        }
+    }
+}
+
+.menu {
+    padding: .9em 1.5em 2em;
+    background-color: #EAEAEA;
+    border-top-left-radius: 3em;
+    border-top-right-radius: 3em;
+    position: relative;
+    top: -5em;
+    margin: auto;
+
+    @include responsive(medium) {
+        width: 80%;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h1 {
+            font-family: 'Shrikhand', sans-serif;
+            font-size: 1.6em;
+        }
+    }
+
+    .starters {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        h2 {
+            font-weight: 300;
+            text-transform: uppercase;
+            font-size: 1em;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 60%;
+                height: .2em;
+                background-color: $tertiary-color;
+                top: 1.5em;
+                left: 0;
+            }
+        }
+
+        &__plat {
+            background-color: #fff;
+            display: flex;
+            width: -webkit-fill-available;
+            border-radius: 1em;
+            padding-left: 1em;
+            margin-top: 1em;
+            justify-content: space-between;
+            align-items: flex-end;
+            box-shadow: 0px 0px 15px #00000020;
+            height: 4.5em;
+            overflow: hidden;
+
+            header {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1em 0;
+                width: 70%;
+
+                /*&:hover + .like {
+                    display: flex;
+                }*/
+
+                h3 {
+                    margin: 0 0 .2em 0;
+                    font-size: 1em;
+                }
+
+                h3, span {
+                    text-align: left;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 1;
+                    -webkit-box-orient: vertical;  
+                    overflow: hidden;
+                }
+            }
+
+            .price {
+                font-weight: 700;
+                margin-right: .5em;
+                padding: 1em 0;
+                width: 30%;
+            }
+
+            .like {
+                display: flex;
+                visibility: hidden;
+                justify-content: center;
+                align-items: center;
+                width: 0;
+                height: 100%;
+                background-color: $tertiary-color;
+                color: #fff;
+                font-size: 1.5em;
+                transition: visibility .5s, width .5s ease-in-out;
+
+                .fas {
+                    transition: transform .5s, linear .5s;
+                    transform: rotate(0deg);
+                }
+
+            }
+            &:hover .like {
+                transition: visibility .5s, width .5s ease-in-out;
+                visibility: visible;
+                width: 25%;
+            }
+            &:hover .fas {
+                transition: transform .5s, linear .5s;
+                transform: rotate(360deg);
+            }
+        }
+    }
+
+}
