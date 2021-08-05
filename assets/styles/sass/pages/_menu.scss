@@ -20,6 +20,7 @@
     position: relative;
     top: -5em;
     margin: auto;
+    margin-bottom: -5em;
 
     @include responsive(medium) {
         width: 80%;
@@ -36,11 +37,12 @@
         }
     }
 
-    .starters {
+    .group {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
+        margin-bottom: 2em;
 
         h2 {
             font-weight: 300;
@@ -51,7 +53,7 @@
             &::before {
                 content: '';
                 position: absolute;
-                width: 60%;
+                width: 2.5em;
                 height: .2em;
                 background-color: $tertiary-color;
                 top: 1.5em;
@@ -71,21 +73,25 @@
             box-shadow: 0px 0px 15px #00000020;
             height: 4.5em;
             overflow: hidden;
+            animation: frombottom 1s linear both;
+            /*animation-fill-mode: both;
+            animation-name: frombottom;
+            animation-direction: normal;*/
 
             header {
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
                 padding: 1em 0;
-                width: 70%;
-
-                /*&:hover + .like {
-                    display: flex;
-                }*/
+                width: 80%;
 
                 h3 {
                     margin: 0 0 .2em 0;
                     font-size: 1em;
+                }
+
+                span {
+                    font-size: .9em;
                 }
 
                 h3, span {
@@ -101,7 +107,7 @@
                 font-weight: 700;
                 margin-right: .5em;
                 padding: 1em 0;
-                width: 30%;
+                width: 20%;
             }
 
             .like {
@@ -131,6 +137,26 @@
                 transition: transform .5s, linear .5s;
                 transform: rotate(360deg);
             }
+            @for $i from 1 through 9 {
+                &:nth-child(#{$i}n) {
+                    animation-delay: #{$i * 0.5}s;
+                }
+            }
+
+            @keyframes frombottom { 
+                0% {
+                  opacity: 0;
+                  transform: translateY(15%);
+                }
+              
+                85% {
+                  opacity: 1;
+                  transform: translateY(0);
+                }
+                100% {
+                  transform: translateY(0);
+                }
+              }
         }
     }
 
