@@ -16,6 +16,9 @@
 /* Breakpoints */
 
 @mixin responsive($breakpoint) {
+  @if $breakpoint == large {
+    @media (min-width: 1100px) { @content };
+  }
   @if $breakpoint == medium {
     @media (min-width: 870px) { @content };
   }
