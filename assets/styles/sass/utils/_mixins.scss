@@ -23,6 +23,6 @@
     @media (min-width: 870px) { @content };
   }
   @if $breakpoint == small {
-    @media (max-width: 350px) { @content };
+    @media (max-width: 365px) { @content };
   }
 }
