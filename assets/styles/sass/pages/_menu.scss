@@ -164,9 +164,9 @@
                 transition: transform .5s, linear .5s;
                 transform: rotate(360deg);
             }
-            @for $i from 1 through 9 {
+            @for $i from 2 through 5 {
                 &:nth-child(#{$i}n) {
-                    animation-delay: #{$i * 0.5}s;
+                    animation-delay: #{$i * 0.3}s;
                 }
             }
 
