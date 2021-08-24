@@ -18,7 +18,7 @@
 }
 
 .menu {
-    padding: .9em 1.5em 2em;
+    padding: .9em 1.5em 4em;
     background-color: #EAEAEA;
     border-top-left-radius: 3em;
     border-top-right-radius: 3em;
@@ -92,6 +92,7 @@
             background-color: #fff;
             display: flex;
             width: -webkit-fill-available;
+            width: -moz-available;
             border-radius: 1em;
             padding-left: 1em;
             margin-top: 1em;
@@ -101,9 +102,6 @@
             height: 4.5em;
             overflow: hidden;
             animation: frombottom 1s linear both;
-            /*animation-fill-mode: both;
-            animation-name: frombottom;
-            animation-direction: normal;*/
 
             header {
                 display: flex;
@@ -186,8 +184,4 @@
               }
         }
     }
-    .btn {
-        padding: 1.2em 2em;
-    }
-
 }
