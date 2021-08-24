@@ -9,7 +9,7 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        padding: 2em 0 2em 2em;
+        padding: 1.5em 0 1em 2em;
 
         h4 {
             font-family: 'Shrikhand', sans-serif;
@@ -35,6 +35,9 @@
                         margin-right: .5em;
                     }
                 }
+            }
+            .fa-hands-helping {
+                font-size: .8em;
             }
         }
     }

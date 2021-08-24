@@ -1,0 +1,81 @@
+.loader {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    visibility: hidden;
+    animation: lds-come ease-in-out 4s;
+
+    @keyframes lds-come {
+        0%, 95% {
+            visibility: visible;
+            opacity: 1;
+        }
+        100% {
+          visibility: hidden;
+          opacity:  0;
+        }
+      }
+
+    .overlay {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        background-color: #000;
+        opacity: .8;
+        z-index: 2;
+    }
+
+    .lds-spin {
+        display: inline-block;
+        position: relative;
+        width: 5em;
+        height: 2em;
+        z-index: 3;
+
+        div {
+            display: inline-block;
+            position: absolute;
+            left: 0em;
+            width: 1em;
+            background: #fff;
+            animation: lds-spin 1s linear;
+            animation-iteration-count: 4;
+            border-radius: 50%;
+    
+            @for $i from 1 through 3 {
+                &:nth-child(#{$i}n) {
+                    animation-delay: #{$i * 0.12}s;
+                }
+              }
+            &:nth-child(1) {
+                left: 0em;
+                background-color: $primary-color;
+            }
+            &:nth-child(2) {
+                left: 2em;
+                background-color: $secondary-color;
+            }
+            &:nth-child(3) {
+                left: 4em;
+                background-color: $tertiary-color;
+            }
+            @keyframes lds-spin {
+                0% {
+                  top: 1em;
+                  height: 1em;
+                }
+                50%, 100% {
+                  top: 2em;
+                  height: 1em;
+                }
+            }
+        }
+    }
+}
