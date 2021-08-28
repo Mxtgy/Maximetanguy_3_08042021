@@ -1,5 +1,4 @@
 .image {
-    figure {
         margin: 0;
         width: 100%;
         display: flex;
@@ -14,7 +13,6 @@
         @include responsive(small) {
             height: 13em;
         }
-    }
 }
 
 .menu {
@@ -149,36 +147,33 @@
 
                 .fas {
                     transition: transform .5s, linear .5s;
-                    transform: rotate(0deg);
                 }
 
             }
             &:hover .like {
-                transition: visibility .5s, width .5s ease-in-out;
                 visibility: visible;
                 width: 25%;
             }
             &:hover .fas {
-                transition: transform .5s, linear .5s;
                 transform: rotate(360deg);
             }
+
+            /* BOUCLE PLATS */
             @for $i from 2 through 5 {
                 &:nth-child(#{$i}n) {
                     animation-delay: #{$i * 0.3}s;
                 }
             }
 
+            /* ANIMATION PLATS */
             @keyframes frombottom { 
                 0% {
                   opacity: 0;
                   transform: translateY(15%);
                 }
               
-                85% {
+                85%, 100% {
                   opacity: 1;
-                  transform: translateY(0);
-                }
-                100% {
                   transform: translateY(0);
                 }
               }
