@@ -9,16 +9,17 @@
     left: 0;
     margin: auto;
     z-index: 1;
-    visibility: hidden;
-    animation: lds-come ease-in-out 4s;
+    visibility: collapse;
+    animation: come ease-in-out 4s;
 
-    @keyframes lds-come {
+    /* ANIMATION OVERLAY */
+    @keyframes come {
         0%, 95% {
             visibility: visible;
             opacity: 1;
         }
         100% {
-          visibility: hidden;
+          visibility: collapse;
           opacity:  0;
         }
       }
@@ -32,23 +33,23 @@
         z-index: 2;
     }
 
-    .lds-spin {
-        display: inline-block;
+    .spin {
         position: relative;
         width: 5em;
         height: 2em;
         z-index: 3;
 
         div {
-            display: inline-block;
             position: absolute;
             left: 0em;
             width: 1em;
+            height: 1em;
             background: #fff;
-            animation: lds-spin 1s linear;
+            animation: spin 1s linear;
             animation-iteration-count: 4;
             border-radius: 50%;
     
+            /* BOUCLE DOTS */
             @for $i from 1 through 3 {
                 &:nth-child(#{$i}n) {
                     animation-delay: #{$i * 0.12}s;
@@ -66,14 +67,14 @@
                 left: 4em;
                 background-color: $tertiary-color;
             }
-            @keyframes lds-spin {
+
+            /* ANIMATION LOADING */
+            @keyframes spin {
                 0% {
                   top: 1em;
-                  height: 1em;
                 }
                 50%, 100% {
                   top: 2em;
-                  height: 1em;
                 }
             }
         }
